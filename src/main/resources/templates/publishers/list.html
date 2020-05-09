@@ -1,0 +1,32 @@
+<!--
+  ~ Copyright (c) 2020. All rights reserved.
+  ~ This code implemented by Vijay Gupta for learning purpose only.
+  ~ Certification: Spring Framework 5: Beginner to guru
+  -->
+
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Spring Framework Guru</title>
+</head>
+<body>
+    <h1>Publisher List</h1>
+    <div>
+        <table>
+            <tr>
+                <th>Id</th>
+                <th>Publisher Name</th>
+                <th>City</th>
+                <th>State</th>
+            </tr>
+            <tr th:each="publisher : ${publishers}">
+                <td th:text="${publisher.id}">123</td>
+                <td th:text="${publisher.publisherName}"></td>
+                <td th:text="${publisher.city}"></td>
+                <td th:text="${publisher.state}"></td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>
